@@ -1,0 +1,38 @@
+.header {
+  background-color: #1b1f2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 4px solid #97ce4c;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #97ce4c;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background-color: #2f3547;
+}
+
+.menu a.activo {
+  background-color: #97ce4c;
+  color: #1b1f2b;
+  font-weight: bold;
+}

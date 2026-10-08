@@ -1,0 +1,19 @@
+<h1>Personajes</h1>
+
+<div class="buscador">
+  <input type="text" placeholder="Buscar por nombre..." [(ngModel)]="busqueda" (keyup.enter)="buscar()">
+  <button (click)="buscar()">Buscar</button>
+</div>
+
+<p *ngIf="cargando" class="mensaje">Cargando personajes...</p>
+<p *ngIf="error" class="mensaje error">{{ error }}</p>
+
+<div class="listado" *ngIf="!cargando">
+  <app-personaje-card *ngFor="let p of personajes" [personaje]="p"></app-personaje-card>
+</div>
+
+<div class="paginacion" *ngIf="!cargando && !error">
+  <button (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
+  <span>Página {{ paginaActual }} de {{ totalPaginas }}</span>
+  <button (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas">Siguiente</button>
+</div>

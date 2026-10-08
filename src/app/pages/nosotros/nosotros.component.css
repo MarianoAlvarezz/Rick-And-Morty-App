@@ -1,0 +1,14 @@
+.pagina {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+  color: #2f3547;
+}
+
+p, li {
+  line-height: 1.6;
+}
